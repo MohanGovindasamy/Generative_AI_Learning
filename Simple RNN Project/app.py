@@ -21,7 +21,7 @@ reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
 
 # Step 03: Load Pre-Trained Model
 # Load the saved RNN model that has been trained on IMDB movie reviews
-model = keras.models.load_model('./my_rnn_model.keras')
+model = keras.models.load_model('my_rnn_model.keras')
 
 # Step 04: Utility Functions
 # '''
