@@ -7,6 +7,7 @@ from tensorflow.keras.datasets import imdb  # IMDB dataset for sentiment analysi
 from tensorflow.keras.preprocessing.sequence import pad_sequences  # Padding for uniform sequence length
 from tensorflow.keras.models import load_model  # Loading pre-trained deep learning models
 from tensorflow.keras.layers import Embedding, SimpleRNN, Dense  # Neural network layers
+from pathlib import Path
 
 
 # Step 02: Load IMDB Word Index
@@ -21,7 +22,8 @@ reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
 
 # Step 03: Load Pre-Trained Model
 # Load the saved RNN model that has been trained on IMDB movie reviews
-model = keras.models.load_model('my_rnn_model.keras')
+model_path = model_path = Path("my_rnn_model.keras").resolve()
+model = keras.models.load_model(model_path)
 
 # Step 04: Utility Functions
 # '''
