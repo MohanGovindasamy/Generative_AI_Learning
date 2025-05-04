@@ -22,7 +22,7 @@ reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
 
 # Step 03: Load Pre-Trained Model
 # Load the saved RNN model that has been trained on IMDB movie reviews
-model_path = model_path = Path("my_rnn_model.keras").resolve()
+model_path = model_path = Path("my_rnn_model.h5").resolve()
 model = keras.models.load_model(model_path)
 
 # Step 04: Utility Functions
